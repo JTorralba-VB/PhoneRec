@@ -1,0 +1,650 @@
+[Header]
+2013-11-06 07:50:56,920 [1] INFO  Avaya.ApplicationEnablement.DMCC.ServiceProvider [(null)] <(null)> - Service Provider Started
+[Footer]
+[Header]
+2013-11-06 07:51:48,289 [1] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 1 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<StartApplicationSession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session">
+    <applicationInfo>
+        <applicationID>Simple Record</applicationID>
+        <applicationSpecificInfo>
+            <SessionLoginInfo xmlns="http://www.avaya.com/csta">
+                <userName xmlns="">avaya</userName>
+    <password xmlns="">avayapassword</password>
+    <sessionCleanupDelay xmlns="">5</sessionCleanupDelay>
+    <sessionID xmlns="" />
+</SessionLoginInfo>
+        </applicationSpecificInfo>
+    </applicationInfo>
+    <requestedProtocolVersions>
+        <protocolVersion>3.0</protocolVersion>
+    </requestedProtocolVersions>
+    <requestedSessionDuration>180</requestedSessionDuration>
+</StartApplicationSession>
+2013-11-06 07:51:48,478 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<StartApplicationSessionPosResponse xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session"><sessionID>571730AEB684F514445091E93014C8E9-54</sessionID><actualProtocolVersion>3.0</actualProtocolVersion><actualSessionDuration>180</actualSessionDuration></StartApplicationSessionPosResponse>
+2013-11-06 07:51:48,709 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 2 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDeviceId xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <switchName>192.168.5.227</switchName>
+    <extension>1003</extension>
+</GetDeviceId>
+2013-11-06 07:51:48,711 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 3 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDeviceId xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <switchName>192.168.5.227</switchName>
+    <extension>1115</extension>
+</GetDeviceId>
+2013-11-06 07:51:48,723 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<GetDeviceIdResponse xmlns="http://www.avaya.com/csta"><device typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</device></GetDeviceIdResponse>
+2013-11-06 07:51:57,426 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 4 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<MonitorStart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <monitorObject>
+        <deviceObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</deviceObject>
+    </monitorObject>
+    <requestedMonitorFilter>
+        <physicalDeviceFeature>
+            <displayUpdated>false</displayUpdated>
+            <hookswitch>true</hookswitch>
+            <lampMode>true</lampMode>
+            <ringerStatus>false</ringerStatus>
+        </physicalDeviceFeature>
+    </requestedMonitorFilter>
+    <extensions>
+        <privateData>
+            <private>
+<AvayaEvents>
+<invertFilter>true</invertFilter>
+</AvayaEvents>
+</private>
+        </privateData>
+    </extensions>
+</MonitorStart>
+2013-11-06 07:51:57,594 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 5 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<RegisterTerminalRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+    <loginInfo>
+        <forceLogin>true</forceLogin>
+        <sharedControl>true</sharedControl>
+        <password>7299</password>
+    </loginInfo>
+</RegisterTerminalRequest>
+2013-11-06 07:51:57,594 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><systemResourceAvailibility>resourceBusy</systemResourceAvailibility></CSTAErrorCode>
+2013-11-06 07:52:00,180 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<MonitorStartResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><actualMonitorFilter><physicalDeviceFeature><displayUpdated>false</displayUpdated><hookswitch>true</hookswitch><lampMode>true</lampMode><ringerStatus>false</ringerStatus></physicalDeviceFeature></actualMonitorFilter><extensions><privateData><private><ns1:AvayaEvents xmlns:ns1="http://www.avaya.com/csta" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:AvayaEvents"><ns1:invertFilter>true</ns1:invertFilter></ns1:AvayaEvents></private></privateData></extensions></MonitorStartResponse>
+2013-11-06 07:52:00,181 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<RegisterTerminalResponse xmlns="http://www.avaya.com/csta"><device><ns1:deviceIdentifier xmlns:ns1="http://www.ecma.ch/standards/ecma-323/csta/ed2" typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</ns1:deviceIdentifier></device><code>1</code></RegisterTerminalResponse>
+2013-11-06 07:52:01,945 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>264</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:52:01,947 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:52:01,947 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>267</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:01,948 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>270</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:01,948 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>278</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:10,628 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>false</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:52:10,838 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:11,006 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 6 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:11,476 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11045</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>initiated</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:12,496 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 7 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:12,545 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11045</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>initiated</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:13,546 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 8 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:13,594 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11045</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>initiated</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:14,595 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 9 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:14,595 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>true</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:52:14,595 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:14,764 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 10 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SetHookswitchStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <device typeOfNumber="other" mediaClass="notKnown" />
+    <hookswitch>0</hookswitch>
+    <hookswitchOnhook>true</hookswitchOnhook>
+</SetHookswitchStatus>
+2013-11-06 07:52:14,765 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData /></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:14,769 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><operation>invalidDeviceID</operation></CSTAErrorCode>
+2013-11-06 07:52:17,947 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>false</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:52:18,147 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:18,147 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:18,151 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 11 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:19,345 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>alerting</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:20,346 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 12 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:20,346 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:20,394 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>alerting</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:21,395 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 13 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:21,445 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>alerting</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:22,445 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 14 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:52:22,448 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:22,496 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>connected</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:52:22,679 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 15 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDisplay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+</GetDisplay>
+2013-11-06 07:52:22,710 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><privateErrorCode>coreCastor</privateErrorCode></CSTAErrorCode>
+2013-11-06 07:52:22,918 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 16 Device Id: 1115:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SingleStepConferenceCall xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <activeCall>
+        <callID>11046</callID>
+        <deviceID typeOfNumber="other" mediaClass="notKnown">1003:SWLINK1::0</deviceID>
+    </activeCall>
+    <deviceToJoin typeOfNumber="other" mediaClass="notKnown">1115:swlink1:192.168.5.227:0</deviceToJoin>
+    <participationType>active</participationType>
+</SingleStepConferenceCall>
+2013-11-06 07:52:23,053 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1115:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SingleStepConferenceCallResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><conferencedCall><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1115:SWLINK1::0</deviceID></conferencedCall><extensions><privateData><private><ns1:SingleStepConferenceCallResponsePrivateData xmlns:ns1="http://www.avaya.com/csta" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:SingleStepConferenceCallResponsePrivateData"><ns1:globallyUniqueCallLinkageID>00000000000000000000</ns1:globallyUniqueCallLinkageID><ns1:resultingConnections><ns1:connection><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1011:SWLINK1::0</deviceID></ns1:connection><ns1:connection><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></ns1:connection><ns1:connection><callID>11046</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1115:SWLINK1::0</deviceID></ns1:connection></ns1:resultingConnections></ns1:SingleStepConferenceCallResponsePrivateData></private></privateData></extensions></SingleStepConferenceCallResponse>
+2013-11-06 07:52:46,602 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>true</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:52:46,802 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:46,806 [5] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 17 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SetHookswitchStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <device typeOfNumber="other" mediaClass="notKnown" />
+    <hookswitch>0</hookswitch>
+    <hookswitchOnhook>true</hookswitchOnhook>
+</SetHookswitchStatus>
+2013-11-06 07:52:46,806 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>1</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:52:46,809 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><operation>invalidDeviceID</operation></CSTAErrorCode>
+2013-11-06 07:52:47,382 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 18 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<ResetApplicationSessionTimer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session">
+    <sessionID>571730AEB684F514445091E93014C8E9-54</sessionID>
+    <requestedSessionDuration>180</requestedSessionDuration>
+</ResetApplicationSessionTimer>
+2013-11-06 07:52:47,425 [5] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<ResetApplicationSessionTimerPosResponse xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session"><actualSessionDuration>180</actualSessionDuration></ResetApplicationSessionTimerPosResponse>
+2013-11-06 07:53:25,824 [1] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 19 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<UnregisterTerminalRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <device typeOfNumber="other" mediaClass="notKnown" />
+    <forceLogout>true</forceLogout>
+</UnregisterTerminalRequest>
+2013-11-06 07:53:25,825 [1] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 20 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<UnregisterTerminalRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+    <forceLogout>true</forceLogout>
+</UnregisterTerminalRequest>
+[Footer]
+[Header]
+2013-11-06 07:53:42,811 [1] INFO  Avaya.ApplicationEnablement.DMCC.ServiceProvider [(null)] <(null)> - Service Provider Started
+[Footer]
+[Header]
+2013-11-06 07:54:30,326 [1] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 1 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<StartApplicationSession xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session">
+    <applicationInfo>
+        <applicationID>Simple Record</applicationID>
+        <applicationSpecificInfo>
+            <SessionLoginInfo xmlns="http://www.avaya.com/csta">
+                <userName xmlns="">avaya</userName>
+    <password xmlns="">avayapassword</password>
+    <sessionCleanupDelay xmlns="">5</sessionCleanupDelay>
+    <sessionID xmlns="" />
+</SessionLoginInfo>
+        </applicationSpecificInfo>
+    </applicationInfo>
+    <requestedProtocolVersions>
+        <protocolVersion>3.0</protocolVersion>
+    </requestedProtocolVersions>
+    <requestedSessionDuration>180</requestedSessionDuration>
+</StartApplicationSession>
+2013-11-06 07:54:30,333 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<StartApplicationSessionPosResponse xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session"><sessionID>468C65B5EA209D3AC197628FE51FFA44-55</sessionID><actualProtocolVersion>3.0</actualProtocolVersion><actualSessionDuration>180</actualSessionDuration></StartApplicationSessionPosResponse>
+2013-11-06 07:54:30,685 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 2 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDeviceId xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <switchName>192.168.5.227</switchName>
+    <extension>1003</extension>
+</GetDeviceId>
+2013-11-06 07:54:30,692 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 3 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDeviceId xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <switchName>192.168.5.227</switchName>
+    <extension>1115</extension>
+</GetDeviceId>
+2013-11-06 07:54:30,729 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<GetDeviceIdResponse xmlns="http://www.avaya.com/csta"><device typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</device></GetDeviceIdResponse>
+2013-11-06 07:54:34,015 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 4 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<MonitorStart xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <monitorObject>
+        <deviceObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</deviceObject>
+    </monitorObject>
+    <requestedMonitorFilter>
+        <physicalDeviceFeature>
+            <displayUpdated>false</displayUpdated>
+            <hookswitch>true</hookswitch>
+            <lampMode>true</lampMode>
+            <ringerStatus>false</ringerStatus>
+        </physicalDeviceFeature>
+    </requestedMonitorFilter>
+    <extensions>
+        <privateData>
+            <private>
+<AvayaEvents>
+<invertFilter>true</invertFilter>
+</AvayaEvents>
+</private>
+        </privateData>
+    </extensions>
+</MonitorStart>
+2013-11-06 07:54:34,339 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 5 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<RegisterTerminalRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+    <loginInfo>
+        <forceLogin>true</forceLogin>
+        <sharedControl>true</sharedControl>
+        <password>7299</password>
+    </loginInfo>
+</RegisterTerminalRequest>
+2013-11-06 07:54:34,339 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><systemResourceAvailibility>resourceBusy</systemResourceAvailibility></CSTAErrorCode>
+2013-11-06 07:54:36,663 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<MonitorStartResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><actualMonitorFilter><physicalDeviceFeature><displayUpdated>false</displayUpdated><hookswitch>true</hookswitch><lampMode>true</lampMode><ringerStatus>false</ringerStatus></physicalDeviceFeature></actualMonitorFilter><extensions><privateData><private><ns1:AvayaEvents xmlns:ns1="http://www.avaya.com/csta" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:AvayaEvents"><ns1:invertFilter>true</ns1:invertFilter></ns1:AvayaEvents></private></privateData></extensions></MonitorStartResponse>
+2013-11-06 07:54:36,665 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<RegisterTerminalResponse xmlns="http://www.avaya.com/csta"><device><ns1:deviceIdentifier xmlns:ns1="http://www.ecma.ch/standards/ecma-323/csta/ed2" typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</ns1:deviceIdentifier></device><code>1</code></RegisterTerminalResponse>
+2013-11-06 07:54:38,535 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>264</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:54:38,538 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:54:38,539 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>267</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:54:38,539 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>270</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:54:38,539 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>278</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:54:53,138 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>false</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:54:53,338 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:54:53,338 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:54:53,666 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 6 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:54:53,969 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>alerting</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:54:54,976 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 7 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:54:55,019 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>alerting</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:54:56,019 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 8 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:54:56,022 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:54:56,070 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>connected</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:54:56,395 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 9 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDisplay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+</GetDisplay>
+2013-11-06 07:54:56,398 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><privateErrorCode>coreCastor</privateErrorCode></CSTAErrorCode>
+2013-11-06 07:54:56,716 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 10 Device Id: 1115:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SingleStepConferenceCall xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <activeCall>
+        <callID>11060</callID>
+        <deviceID typeOfNumber="other" mediaClass="notKnown">1003:SWLINK1::0</deviceID>
+    </activeCall>
+    <deviceToJoin typeOfNumber="other" mediaClass="notKnown">1115:swlink1:192.168.5.227:0</deviceToJoin>
+    <participationType>active</participationType>
+</SingleStepConferenceCall>
+2013-11-06 07:54:56,821 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1115:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SingleStepConferenceCallResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><conferencedCall><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1115:SWLINK1::0</deviceID></conferencedCall><extensions><privateData><private><ns1:SingleStepConferenceCallResponsePrivateData xmlns:ns1="http://www.avaya.com/csta" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:SingleStepConferenceCallResponsePrivateData"><ns1:globallyUniqueCallLinkageID>00000000000000000000</ns1:globallyUniqueCallLinkageID><ns1:resultingConnections><ns1:connection><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1011:SWLINK1::0</deviceID></ns1:connection><ns1:connection><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></ns1:connection><ns1:connection><callID>11060</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1115:SWLINK1::0</deviceID></ns1:connection></ns1:resultingConnections></ns1:SingleStepConferenceCallResponsePrivateData></private></privateData></extensions></SingleStepConferenceCallResponse>
+2013-11-06 07:54:57,258 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:17,653 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:18,392 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>true</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:55:18,592 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:18,922 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 11 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SetHookswitchStatus xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <device typeOfNumber="other" mediaClass="notKnown" />
+    <hookswitch>0</hookswitch>
+    <hookswitchOnhook>true</hookswitchOnhook>
+</SetHookswitchStatus>
+2013-11-06 07:55:18,925 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><operation>invalidDeviceID</operation></CSTAErrorCode>
+2013-11-06 07:55:29,898 [3] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 12 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<ResetApplicationSessionTimer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session">
+    <sessionID>468C65B5EA209D3AC197628FE51FFA44-55</sessionID>
+    <requestedSessionDuration>180</requestedSessionDuration>
+</ResetApplicationSessionTimer>
+2013-11-06 07:55:29,940 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<ResetApplicationSessionTimerPosResponse xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session"><actualSessionDuration>180</actualSessionDuration></ResetApplicationSessionTimerPosResponse>
+2013-11-06 07:55:56,416 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:58,825 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>262</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:59,094 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>264</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:59,294 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>265</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:59,294 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>265</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:55:59,496 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:55:59,497 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>267</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:55:59,656 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>268</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:59,656 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>268</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:55:59,657 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>269</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:55:59,657 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>269</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:55:59,934 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>270</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,134 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>271</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,134 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>271</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,216 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>272</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,216 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>272</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,216 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>273</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,217 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>273</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,496 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>274</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,696 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>274</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,696 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>275</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,697 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>275</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,776 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>276</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,776 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>276</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:00,776 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>277</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:00,780 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>277</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:01,055 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>278</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>1</lampColor></LampModeEvent>
+2013-11-06 07:56:01,255 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>279</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,255 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>280</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,333 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>281</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,333 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>282</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,334 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>283</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,335 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>284</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,610 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>285</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,810 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>286</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,810 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>287</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,811 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>288</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,892 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>289</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,892 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>290</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,892 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>291</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:01,893 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>292</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:02,170 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>293</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:02,370 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>294</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:02,370 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>295</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:02,371 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>296</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:27,011 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>266</lamp><lampMode>2</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:29,611 [3] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 13 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<ResetApplicationSessionTimer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session">
+    <sessionID>468C65B5EA209D3AC197628FE51FFA44-55</sessionID>
+    <requestedSessionDuration>180</requestedSessionDuration>
+</ResetApplicationSessionTimer>
+2013-11-06 07:56:29,655 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<ResetApplicationSessionTimerPosResponse xmlns="http://www.ecma-international.org/standards/ecma-354/appl_session"><actualSessionDuration>180</actualSessionDuration></ResetApplicationSessionTimerPosResponse>
+2013-11-06 07:56:37,611 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>7</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:38,950 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<HookswitchEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><hookswitch>0000</hookswitch><hookswitchOnHook>false</hookswitchOnHook></HookswitchEvent>
+2013-11-06 07:56:39,149 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<LampModeEvent xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><monitorCrossRefID>2</monitorCrossRefID><device><deviceIdentifier typeOfNumber="other" mediaClass="voice" bitRate="constant">1003:swlink1:192.168.5.227:0</deviceIdentifier></device><lamp>263</lamp><lampMode>3</lampMode><lampBrightness>unspecified</lampBrightness><lampColor>3</lampColor></LampModeEvent>
+2013-11-06 07:56:39,153 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 14 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SnapshotDevice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <snapshotObject typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</snapshotObject>
+</SnapshotDevice>
+2013-11-06 07:56:39,433 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SnapshotDeviceResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><crossRefIDorSnapshotDeviceData><snapshotDeviceData><snapshotDeviceResponseInfo><connectionIdentifier><callID>11070</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></connectionIdentifier><localCallState><compoundCallState><localConnectionState>connected</localConnectionState><localConnectionState>connected</localConnectionState></compoundCallState></localCallState></snapshotDeviceResponseInfo></snapshotDeviceData></crossRefIDorSnapshotDeviceData></SnapshotDeviceResponse>
+2013-11-06 07:56:39,434 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 15 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<GetDisplay xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+</GetDisplay>
+2013-11-06 07:56:39,437 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1003:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><privateErrorCode>coreCastor</privateErrorCode></CSTAErrorCode>
+2013-11-06 07:56:39,437 [6] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 16 Device Id: 1115:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<SingleStepConferenceCall xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2">
+    <activeCall>
+        <callID>11070</callID>
+        <deviceID typeOfNumber="other" mediaClass="notKnown">1003:SWLINK1::0</deviceID>
+    </activeCall>
+    <deviceToJoin typeOfNumber="other" mediaClass="notKnown">1115:swlink1:192.168.5.227:0</deviceToJoin>
+    <participationType>active</participationType>
+</SingleStepConferenceCall>
+2013-11-06 07:56:39,535 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 1115:swlink1:192.168.5.227:0
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<SingleStepConferenceCallResponse xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><conferencedCall><callID>11070</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1115:SWLINK1::0</deviceID></conferencedCall><extensions><privateData><private><ns1:SingleStepConferenceCallResponsePrivateData xmlns:ns1="http://www.avaya.com/csta" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="ns1:SingleStepConferenceCallResponsePrivateData"><ns1:globallyUniqueCallLinkageID>00000000000000000000</ns1:globallyUniqueCallLinkageID><ns1:resultingConnections><ns1:connection><callID>11070</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1003:SWLINK1::0</deviceID></ns1:connection><ns1:connection><callID>11070</callID><deviceID typeOfNumber="dynamic" mediaClass="notKnown" bitRate="constant">T11070#1:SWLINK1::0</deviceID></ns1:connection><ns1:connection><callID>11070</callID><deviceID typeOfNumber="other" mediaClass="notKnown" bitRate="constant">1115:SWLINK1::0</deviceID></ns1:connection></ns1:resultingConnections></ns1:SingleStepConferenceCallResponsePrivateData></private></privateData></extensions></SingleStepConferenceCallResponse>
+2013-11-06 07:56:44,984 [1] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 17 Device Id: 
+XML: <?xml version="1.0" encoding="utf-8"?>
+<UnregisterTerminalRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <device typeOfNumber="other" mediaClass="notKnown" />
+    <forceLogout>true</forceLogout>
+</UnregisterTerminalRequest>
+2013-11-06 07:56:44,984 [1] INFO  XML [(null)] <(null)> - Outgoing XML: Invoke Id: 18 Device Id: 1003:swlink1:192.168.5.227:0
+XML: <?xml version="1.0" encoding="utf-8"?>
+<UnregisterTerminalRequest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.avaya.com/csta">
+    <device typeOfNumber="other" mediaClass="notKnown">1003:swlink1:192.168.5.227:0</device>
+    <forceLogout>true</forceLogout>
+</UnregisterTerminalRequest>
+2013-11-06 07:56:44,988 [6] INFO  XML [(null)] <(null)> - Incoming XML Message. Device Id: 
+XML Message: <?xml version="1.0" encoding="UTF-8"?>
+<CSTAErrorCode xmlns="http://www.ecma.ch/standards/ecma-323/csta/ed2"><operation>invalidDeviceID</operation></CSTAErrorCode>
+[Footer]
